@@ -1,4 +1,4 @@
-# --------------------- UNDER DEVELOPMENT --------------------------
+# --------------------- BRUTE FORCE WARNING --------------------------
 
 import requests
 from bs4 import BeautifulSoup
