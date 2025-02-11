@@ -25,7 +25,7 @@ for line in paths:
                             # if item['href'] not in hrefs:
                             #     hrefs.append(item['href'])
                             hrefs.append(item['href'])
-                elif not child.find_all('i'):
+                else:
                     contents = child.find_all('b')
                     for item in contents:
                         # if not item.has_attr('class'):
@@ -33,13 +33,13 @@ for line in paths:
                         # if item.a['href'] not in hrefs:
                         #     hrefs.append(item.a['href'])
                         hrefs.append(item.a['href'])
-                else:
-                    contents = child.find_all('i')
-                    for item in contents:
-                        # if not item.has_attr('class'):
-                        #     hrefs.append(item['href'])
-                        for b in item.find_all('b'):
-                            hrefs.append(item.a['href'])
+                # else:
+                #     contents = child.find_all('i')
+                #     for item in contents:
+                #         # if not item.has_attr('class'):
+                #         #     hrefs.append(item['href'])
+                #         for b in item.find_all('b'):
+                #             hrefs.append(item.a['href'])
 
 hrefs = list(dict.fromkeys(hrefs))  # removing duplicates from the hrefs
 print(len(hrefs))
